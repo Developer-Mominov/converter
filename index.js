@@ -1,5 +1,3 @@
-'use strict';
-
 
 window.onload = () => {
     setTimeout(() => {
@@ -18,7 +16,7 @@ function text() {
 var resultat = document.getElementById("result");
 
 try {
-    function clear(tt) {
+    function clearstr(tt) {
         var newstr = "";
         tt = tt.split("");
         for (let i = tt.length; i > 0; i -= 3) {
@@ -35,6 +33,8 @@ try {
     alert(err.message);
 }
 
+// --------------------------------------------------------------------
+
 function result() {
 
     let first = document.getElementById("currency").value;
@@ -49,7 +49,7 @@ function result() {
         })
         .then(response => response.json())
         .then(data => {
-            clear((data * third).toFixed(0));
+            clearstr((data * third).toFixed(0));
 
         })
         .catch(e => {
@@ -59,6 +59,8 @@ function result() {
 
 }
 
+
+// --------------------------------------------------------------------
 
 
 
